@@ -12,6 +12,7 @@ from agency import create_agency
 from agency_swarm.integrations.fastapi import run_fastapi
 
 
+
 if __name__ == "__main__":
     run_fastapi(
         agencies={
