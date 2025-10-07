@@ -4,7 +4,7 @@ from agency_swarm import Agent
 
 
 example_agent = Agent(
-    name="New Example Agent",
+    name="HelpManager",
     description="A helpful and knowledgeable assistant that provides comprehensive support and guidance across various domains.",
     instructions="./instructions.md",
     tools_folder="./tools",
