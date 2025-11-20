@@ -1,6 +1,7 @@
 from agents import ModelSettings
 from agency_swarm import Agent
 from openai.types.shared import Reasoning
+from agents.extensions.models.litellm_model import LitellmModel
 
 example_agent2 = Agent(
     name="ExampleAgent2",
@@ -8,7 +9,10 @@ example_agent2 = Agent(
     instructions="./instructions.md",
     tools_folder="./tools",
     files_folder="./files",
-    model="litellm/anthropic/claude-sonnet-4-5-20250929",
+    model=LitellmModel(
+        model="anthropic/claude-sonnet-4-5-20250929",  # Remove litellm/ prefix
+        api_key=os.getenv("ANTHROPIC_API_KEY")
+    ),
     model_settings=ModelSettings(
         max_tokens=25000,
         reasoning=Reasoning(

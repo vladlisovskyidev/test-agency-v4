@@ -1,7 +1,7 @@
 from agents import ModelSettings
 from openai.types.shared import Reasoning
 from agency_swarm import Agent
-
+from agents.extensions.models.litellm_model import LitellmModel
 
 example_agent = Agent(
     name="HelpManager",
@@ -9,7 +9,10 @@ example_agent = Agent(
     instructions="./instructions.md",
     tools_folder="./tools",
     files_folder="./files",
-    model="openai/gpt-5",
+    model=LitellmModel(
+        model="openai/gpt-5",  # Add openai/ prefix
+        api_key=os.getenv("OPENAI_API_KEY")
+    ),
     model_settings=ModelSettings(
         max_tokens=25000,
         reasoning=Reasoning(
