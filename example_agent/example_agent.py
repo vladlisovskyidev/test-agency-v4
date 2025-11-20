@@ -11,7 +11,6 @@ example_agent = Agent(
     files_folder="./files",
     model=LitellmModel(
         model="openai/gpt-5",  # Add openai/ prefix
-        api_key=os.getenv("OPENAI_API_KEY")
     ),
     model_settings=ModelSettings(
         max_tokens=25000,
