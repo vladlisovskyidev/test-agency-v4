@@ -1,5 +1,6 @@
 agency-swarm[fastapi]>=1.5.0
 agency-swarm[litellm]>=1.5.0
+git+https://github.com/VRSEN/agency-swarm.git@guardrail-streaming-fix
 fastapi
 uvicorn
 
