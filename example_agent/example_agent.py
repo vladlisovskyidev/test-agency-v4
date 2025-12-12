@@ -9,9 +9,7 @@ example_agent = Agent(
     instructions="./instructions.md",
     tools_folder="./tools",
     files_folder="./files",
-    model=LitellmModel(
-        model="openai/gpt-5",  # Add openai/ prefix
-    ),
+    model="openai/gpt-5",
     model_settings=ModelSettings(
         max_tokens=25000,
         # reasoning=Reasoning(
