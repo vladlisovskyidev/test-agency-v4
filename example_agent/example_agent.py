@@ -1,7 +1,6 @@
 from agents import ModelSettings
 from openai.types.shared import Reasoning
 from agency_swarm import Agent
-from agents.extensions.models.litellm_model import LitellmModel
 
 example_agent = Agent(
     name="HelpManager",
