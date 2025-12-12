@@ -1,3 +1,4 @@
 git+https://github.com/VRSEN/agency-swarm.git@guardrail-streaming-fix
 fastapi
 uvicorn
+
